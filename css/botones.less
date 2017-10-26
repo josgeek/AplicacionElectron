@@ -1,0 +1,49 @@
+
+@colorNormal:lightgray;
+@colorOk:green;
+@colorno:red;
+
+.boton{
+  background-color: @colorNormal;
+  border: 1px solid darken(@colorNormal, 20%);
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 16px;
+  color: darken(@colorNormal, 20%);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.boton-ok:extend(.boton){
+  background-color: @colorOk;
+  border-color: darken(@colorOk, 10%);
+}
+
+//usar mètodos siempre
+.boton-no:extend(.boton){
+  background-color: @colorno;
+  border-color: darken(@colorno, 10%);
+
+}
+.boton-no:hover{
+  background-color: lighten(@colorno, 20%);
+  border-color: 0px 0px 8px darken(@colorno, 30%);
+  transition: 0.5s;
+  color: darken(@colorno, 30%);
+}
+
+.hover:boton-ok{
+  background-color: lighten(@colorOk, 20%);
+  border-color: 0px 0px 8px darken(@colorOk, 30%);
+  transition: 0.5s;
+  color: darken(@colorOk, 30%);
+}
+
+.boton:hover{
+  background-color: lighten(@colorNormal, 20%);
+  box-shadow: 0px 0px 8px darken(@colorNormal, 30%);
+  transition: 0.5s;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+@bordeNormal: lightgray;
+@bordeError: red;
+.caja{
+
+border: 0.5 solid @bordeNormal;
+background-color: white;
+box-shadow: 0px 0px lighten(@bordeNormal, 20%);
+margin: 3px;
+padding: 5px;
+font-size: 16px;
+border-radius: 6px;
+}
+.caja-error:extend(.caja){
+  border: 0.5 solid @bordeError;
+  box-shadow: 0px 0px 10px lighten(@bordeError, 20%);
+}
